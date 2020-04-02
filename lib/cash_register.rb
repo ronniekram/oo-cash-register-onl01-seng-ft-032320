@@ -34,7 +34,7 @@ class CashRegister
     if @cart = []
       @total = 0
     else
-      @cart.pop.price
+      @total -= last_item
     end 
   end
   
