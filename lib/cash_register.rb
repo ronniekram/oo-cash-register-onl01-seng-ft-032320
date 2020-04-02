@@ -31,10 +31,10 @@ class CashRegister
   end 
   
   def void_last_transaction
-    if @cart = []
+    if @cart == []
       @total = 0
     else
-      @total -= cart
+      @total -= cart.pop.price
     end 
   end
   
