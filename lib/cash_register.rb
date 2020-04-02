@@ -34,7 +34,7 @@ class CashRegister
     if @cart = []
       @total = 0
     else
-      @total -= cart[-1].price
+      @total -= @cart[-1].price
     end 
   end
   
