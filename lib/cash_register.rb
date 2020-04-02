@@ -13,7 +13,7 @@ class CashRegister
   
   def add_item(item, price, quantity = 1)
     @total += price * quantity
-    @cart << self.name
+    @cart << self
   end 
   
   def apply_discount
@@ -33,7 +33,7 @@ class CashRegister
     if @cart = []
       @total = 0
     else
-      @total -= cart[-1]
+      @total -= cart
     end 
   end
   
