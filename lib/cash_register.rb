@@ -14,7 +14,10 @@ class CashRegister
   
   def add_item(item, price, quantity = 1)
     @total += price * quantity
-    @cart << item
+    quantity.times do
+      @cart << item
+    end 
+     @last_item = item 
   end 
   
   def apply_discount
@@ -34,7 +37,7 @@ class CashRegister
     if @cart = []
       @total = 0
     else
-      @total -= last_item
+      @total -= @last_item
     end 
   end
   
