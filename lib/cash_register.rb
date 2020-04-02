@@ -34,11 +34,8 @@ class CashRegister
   end 
   
   def void_last_transaction
-    if @cart = []
-      @total = 0
-    else
-      @total = @total - @last_item
-    end 
+    @item.delete_at(-1)
+    @total = @total - @last_item
   end
   
 end 
