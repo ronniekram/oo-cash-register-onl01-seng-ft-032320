@@ -33,7 +33,7 @@ class CashRegister
     if @cart = []
       @total = 0
     else
-      @total -= self.add_item
+      @total -= cart[-1]
     end 
   end
   
